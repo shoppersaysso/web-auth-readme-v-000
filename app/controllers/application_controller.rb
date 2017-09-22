@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user
 
   def authenticate_user
-    client_id = ENV['client_id']
-    client_secret = ENV['client_secret']
+    client_id = ENV['FOURSQUARE_CLIENT_ID']
+    client_secret = ENV['FOURSQUARE_SECRET']
 
 private
   def logged_in?
